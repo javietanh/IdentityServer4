@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  identity:
+    image: ${DOCKER_REGISTRY-}identity
+    build:
+      context: .
+      dockerfile: IdentityServices/Identity/Dockerfile
+  mvc:
+    image: ${DOCKER_REGISTRY-}mvc
+    build:
+      context: .
+      dockerfile: MVC/Dockerfile
+
